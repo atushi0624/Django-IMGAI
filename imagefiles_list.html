@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+  <div class="container">
+    <div class="text-left">
+     <h2 class="text-primary">
+      このサイトの説明
+     </h2>
+     　<p>
+            ポテトチップス、コーラ、カップヌードルの画像判定するＡＩのデモです<br>
+            下記"試す"ボタンをクリックすると画像のアップロード画面に遷移するので任意の画像をアップロードして下さい<br>
+            次の画面で判定結果が表示されます。
+            カップヌードルは誤認識が多い傾向にあります。
+      </p>
+    </div>
+
+      <div class="text-left">
+        <a href='update/1' class="btn btn-success">試す</a>
+      </div>
+
+  </div>
+
+{% endblock %}

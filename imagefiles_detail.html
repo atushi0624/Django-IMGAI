@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+  <div class="container">
+    <div class="md-6">
+      <h2>選択した画像</h2>
+    </div>
+    <div class="md-6">
+      <img src="{{ object.get_path }}" class ="img-thumbnail" width ="200" height ="200" />
+    </div>
+    <div class="md-6">
+      <hr>
+      <h2>判定結果</h2>
+    </div>
+    <div class="md-6">
+       <p class="font-weight-bold lead text-info">{{ object.get_predict.0 }} ( {{ object.get_predict.1 }} %)</p>
+    </div>
+    <div class="text-left">
+       <a href='/' class="btn btn-outline-primary">トップページへ</a>
+       <a class="btn btn-outline-primary" href="javascript:void(0);" onclick="window.history.back();">もう一度判定する</a>
+    </div>
+
+  </div>
+
+{% endblock %}

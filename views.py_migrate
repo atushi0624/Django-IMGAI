@@ -1,0 +1,22 @@
+from django.shortcuts import render
+from .forms import ImgForm
+from django.views.generic import ListView
+from django.views.generic import CreateView
+from django.views.generic import DetailView
+from django.urls import reverse_lazy
+ 
+from .models import ImageFiles
+
+# Create your views here.
+
+class ImgDetailView(DetailView):
+    model = ImageFiles
+        
+class ImgListView(ListView):
+    model = ImageFiles
+    paginate_by = 10
+ 
+class ImgCreateView(CreateView):
+    model = ImageFiles
+    form_class = ImgForm
+    success_url = reverse_lazy("index")
